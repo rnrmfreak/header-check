@@ -1,0 +1,19 @@
+[project]
+name = "header-check"
+version = "0.1.0"
+description = "CLI untuk memeriksa header keamanan HTTP."
+requires-python = ">=3.11"
+dependencies = ["requests>=2.31"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "requests-mock>=1.12"]
+
+[project.scripts]
+header-check = "header_check.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
