@@ -107,3 +107,8 @@ def test_x_powered_by_with_version_warns():
 def test_x_powered_by_missing_passes():
     results = {r.name: r.status for r in evaluate({})}
     assert results["X-Powered-By"] == Status.PASS
+
+
+def test_sengaja_gagal():
+    assert 1 + 1 == 3
+
